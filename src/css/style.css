@@ -1,0 +1,44 @@
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-image: url('../../assets/fonts/main_background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.nav-lien {
+  background-color: #f0ede6;
+  color: #1c1c26;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2em;
+  border-radius: 10px;
+  transition: background-color 0.2s, color 0.2s;
+  width: 50%;
+  margin: 4%;
+}
+
+.nav-lien img {
+  transition: filter 0.2s;
+}
+
+.nav-lien.actif,
+.nav-lien:hover {
+  background-color: #1c1c26;
+  color: #f0ede6;
+  width: 50%;
+  margin: 4%;
+}
+
+.nav-lien.actif img,
+.nav-lien:hover img {
+  filter: invert(1);
+}
