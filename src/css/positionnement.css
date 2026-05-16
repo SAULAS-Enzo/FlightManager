@@ -4,6 +4,16 @@
     gap: 2%;
 }
 
+header{
+    display : flex;
+    border-bottom-color: white ;
+    border-bottom-style: solid ;
+}
+
+header>div {
+    width: 50%;
+}
+
 main{
     width: 70%;
 }
@@ -12,7 +22,8 @@ aside{
     width: 15%;
 }
 
-nav {
+/* MENU DE NAVIGATION*/
+.wrapper>nav {
   width: 15%;
   flex-shrink: 0;
   display: flex;
@@ -27,44 +38,40 @@ nav ul {
   gap: 6px
 }
 
-.nav-lien {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
-}
+/*NAVIGATION INTERNE*/
+    .nav-lien {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+    }
 
-.nav-lien img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
+    .nav-lien img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
 
-header{
-    display : flex;
-    border-bottom-color: white ;
-    border-bottom-style: solid ;
-}
 
-header>div {
-    width: 50%;
-}
+/*NAVIGATION EXTERNE*/
+    .nav-externe {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 16px;
+        width: 50%;       /* ← déplacé depuis style.css */
+        margin: 3% auto;  /* ← déplacé depuis style.css */
+    }
 
-header h1 {
-    padding-left: 5%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3em;
-}
+    .nav-externe img {
+        width: 28px;
+        height: 28px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
 
-header h2 {
-    padding-left: 5%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
-    text-align: right;
-    padding-right: 2%;
-    padding-top: 2%;
-}
+
 
 
 
