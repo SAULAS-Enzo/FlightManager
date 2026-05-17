@@ -5,6 +5,7 @@
     <title>Flight Manager</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/positionnement.css">
+    <link rel="stylesheet" href="../css/calc.css">
     </head>
     <body>
         <header>
@@ -30,13 +31,190 @@
             </nav>
 
             <main>
-                <p>Main content</p>
-            </main>
+                <div id="conteneur-calc">
+                    <!-- ── Pente de montée / descente ── -->
+                    <div class="bloc-calc">
+                        <h2>Pente de montée / descente</h2>
+                        <table class="table-calc">
+                            <tbody>
+                                <tr>
+                                    <th>Altitude de départ (ft)</th>
+                                    <td><input type="number" class="input-calc" id="pente-alt-depart" placeholder="1000"></td>
+                                </tr>
+                                <tr>
+                                    <th>Altitude cible (ft)</th>
+                                    <td><input type="number" class="input-calc" id="pente-alt-cible" placeholder="5000"></td>
+                                </tr>
+                                <tr>
+                                    <th>Vitesse sol (kts)</th>
+                                    <td><input type="number" class="input-calc" id="pente-vs" placeholder="120"></td>
+                                </tr>
+                                <tr>
+                                    <th>Taux (ft/min)</th>
+                                    <td><input type="number" class="input-calc" id="pente-taux" placeholder="500"></td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Distance nécessaire (NM)</th>
+                                    <td class="resultat" id="pente-distance">—</td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Temps nécessaire (min)</th>
+                                    <td class="resultat" id="pente-temps">—</td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Gradient (%)</th>
+                                    <td class="resultat" id="pente-gradient">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn-calc" id="btn-pente">Calculer</button>
+                    </div>
 
-            <aside>
-                <p>Sidebar</p>
-            </aside>
+                    <!-- ── Consommation carburant ── -->
+                    <div class="bloc-calc">
+                        <h2>Consommation carburant</h2>
+                        <table class="table-calc">
+                            <tbody>
+                                <tr>
+                                    <th>Consommation (L/h ou kg/h)</th>
+                                    <td><input type="number" class="input-calc" id="carbu-conso" placeholder="30"></td>
+                                </tr>
+                                <tr>
+                                    <th>Durée de vol (min)</th>
+                                    <td><input type="number" class="input-calc" id="carbu-duree" placeholder="90"></td>
+                                </tr>
+                                <tr>
+                                    <th>Réserve (min)</th>
+                                    <td><input type="number" class="input-calc" id="carbu-reserve" placeholder="45"></td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Carburant trajet (L ou kg)</th>
+                                    <td class="resultat" id="carbu-trajet">—</td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Carburant réserve (L ou kg)</th>
+                                    <td class="resultat" id="carbu-res">—</td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Total nécessaire (L ou kg)</th>
+                                    <td class="resultat" id="carbu-total">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn-calc" id="btn-carbu">Calculer</button>
+                    </div>
+
+                    <!-- ── Temps de vol ── -->
+                    <div class="bloc-calc">
+                        <h2>Temps de vol</h2>
+                        <table class="table-calc">
+                            <tbody>
+                                <tr>
+                                    <th>Distance (NM)</th>
+                                    <td><input type="number" class="input-calc" id="temps-distance" placeholder="150"></td>
+                                </tr>
+                                <tr>
+                                    <th>Vitesse sol (kts)</th>
+                                    <td><input type="number" class="input-calc" id="temps-vs" placeholder="120"></td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Temps de vol (min)</th>
+                                    <td class="resultat" id="temps-min">—</td>
+                                </tr>
+                                <tr class="ligne-resultat">
+                                    <th>Temps de vol (h:mm)</th>
+                                    <td class="resultat" id="temps-heure">—</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn-calc" id="btn-temps">Calculer</button>
+                    </div>
+
+                    <!-- ── Conversions ── -->
+                    <div class="bloc-calc">
+                        <h2>Conversions</h2>
+                        <table class="table-calc">
+                            <thead>
+                                <tr><th colspan="3">Vitesse</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Nœuds (kts)</th>
+                                    <td><input type="number" class="input-calc conv-vitesse" id="conv-kts" placeholder="100"></td>
+                                </tr>
+                                <tr>
+                                    <th>km/h</th>
+                                    <td><input type="number" class="input-calc conv-vitesse" id="conv-kmh" placeholder="185"></td>
+                                </tr>
+                                <tr>
+                                    <th>mph</th>
+                                    <td><input type="number" class="input-calc conv-vitesse" id="conv-mph" placeholder="115"></td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr><th colspan="3">Distance</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Milles nautiques (NM)</th>
+                                    <td><input type="number" class="input-calc conv-distance" id="conv-nm" placeholder="100"></td>
+                                </tr>
+                                <tr>
+                                    <th>Kilomètres (km)</th>
+                                    <td><input type="number" class="input-calc conv-distance" id="conv-km" placeholder="185"></td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr><th colspan="3">Pression</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>hPa</th>
+                                    <td><input type="number" class="input-calc conv-pression" id="conv-hpa" placeholder="1013"></td>
+                                </tr>
+                                <tr>
+                                    <th>inHg</th>
+                                    <td><input type="number" class="input-calc conv-pression" id="conv-inhg" placeholder="29.92"></td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr><th colspan="3">Température</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Celsius (°C)</th>
+                                    <td><input type="number" class="input-calc conv-temp" id="conv-celsius" placeholder="15"></td>
+                                </tr>
+                                <tr>
+                                    <th>Fahrenheit (°F)</th>
+                                    <td><input type="number" class="input-calc conv-temp" id="conv-fahrenheit" placeholder="59"></td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr><th colspan="3">Carburant</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Litres (L)</th>
+                                    <td><input type="number" class="input-calc conv-carbu" id="conv-litres" placeholder="100"></td>
+                                </tr>
+                                <tr>
+                                    <th>Kilogrammes (kg) <small>Avgas ρ=0.72</small></th>
+                                    <td><input type="number" class="input-calc conv-carbu" id="conv-kg" placeholder="72"></td>
+                                </tr>
+                                <tr>
+                                    <th>Gallons US (gal)</th>
+                                    <td><input type="number" class="input-calc conv-carbu" id="conv-gallons" placeholder="26.4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </main>
         </div>
-        
+        <script src="../js/utils.js"></script>
+        <script src="../js/calc.js"></script>
+
     </body>
 </html>
