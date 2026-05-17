@@ -12,7 +12,7 @@ sauvegarderChamp("aerodrome-destination");
 sauvegarderChamp("aerodrome-deroutement");
 sauvegarderChamp("personne-bord");
 
-mettreEnMajuscules("indicatif-appel");
+
 mettreEnMajuscules("aerodrome-depart");
 mettreEnMajuscules("aerodrome-destination");
 mettreEnMajuscules("aerodrome-deroutement");
