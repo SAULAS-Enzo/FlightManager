@@ -24,7 +24,7 @@ function validerOACI(id) {
 function validerIndicatif(id) {
     let champ = document.getElementById(id);
 
-    if (champ.value.length >0) {
+    if (champ.value.length < 0) {
         champ.classList.add("champ-erreur");
         console.log("Erreur sur " + id);
         return false;

@@ -5,6 +5,7 @@
     <title>Flight Manager</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/positionnement.css">
+    <link rel="stylesheet" href="../css/atis.css">
     </head>
     <body>
         <header>
@@ -30,13 +31,15 @@
             </nav>
 
             <main>
-                <p>Main content</p>
+                <div id="conteneur-atis">
+                <div class="bloc-atis" id="bloc-depart"></div>
+                <div class="bloc-atis" id="bloc-destination"></div>
+                <div class="bloc-atis" id="bloc-deroutement"></div>
+                </div>
+                <p><i>* Données issues de Aviation Weather Center — peuvent ne pas être à jour</i></p>
             </main>
-
-            <aside>
-                <p>Sidebar</p>
-            </aside>
         </div>
-        
+        <script src="../js/utils.js"></script>
+        <script src="../js/atis.js"></script>
     </body>
 </html>
