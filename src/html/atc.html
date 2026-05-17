@@ -5,6 +5,7 @@
     <title>Flight Manager</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/positionnement.css">
+    <link rel="stylesheet" href="../css/atc.css">
     </head>
     <body>
         <header>
@@ -30,13 +31,73 @@
             </nav>
 
             <main>
-                <p>Main content</p>
-            </main>
+                <div class="conteneur-atc">
+                    <section id="labels">
+                        <div class="bloc-atc">
+                            <h2>Mise en route</h2>
+                            <textarea id="atc-mise-en-route"></textarea>
+                        </div>
+                        <div class="bloc-atc">
+                            <h2>Taxi / Décollage / Montée</h2>
+                            <textarea id="atc-taxi"></textarea>
+                        </div>
+                        <div class="bloc-atc">
+                            <h2>Croisière</h2>
+                            <textarea id="atc-croisiere"></textarea>
+                        </div>
+                        <div class="bloc-atc">
+                            <h2>Approche / Descente / Atterrissage</h2>
+                            <textarea id="atc-approche"></textarea>
+                        </div>
+                        <div class="bloc-atc">
+                            <h2>Parking</h2>
+                            <textarea id="atc-parking"></textarea>
+                        </div>
+                    </section>
 
-            <aside>
-                <p>Sidebar</p>
-            </aside>
+                    <section id="frequences">
+                        <div id="bloc-depart">
+                            <h2 id="titre-depart"></h2>
+                            <table>
+                            <thead>
+                                <tr><th>Position</th><th>Fréquence (MHz)</th></tr>
+                            </thead>
+                            <tbody id="tableau-depart"></tbody>
+                            </table>
+                        </div>
+
+                        <div id="bloc-destination">
+                            <h2 id="titre-destination"></h2>
+                            <table>
+                            <thead>
+                                <tr><th>Position</th><th>Fréquence (MHz)</th></tr>
+                            </thead>
+                            <tbody id="tableau-destination"></tbody>
+                            </table>
+                        </div>
+
+                        <div id="bloc-intermediaires">
+                            <h2>ATC intermédiaires</h2>
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>Indicatif</th>
+                                    <th>Fréquence (MHz)</th>
+                                    <th></th>  <!-- colonne bouton supprimer -->
+                                </tr>
+                                </thead>
+                                <tbody id="tableau-intermediaires">
+                                <!-- rempli par JS -->
+                                </tbody>
+                            </table>
+                            <button type="button" id="btnAjouterLigne">+ Ajouter une ligne</button>
+                        </div>
+                        <p><i>* Les fréquences peuvent ne pas être à jour</i></p>
+                    </section>
+                </div>
+            </main>
         </div>
-        
+        <script src="../js/utils.js"></script>
+        <script src="../js/atc.js"></script>
     </body>
 </html>
