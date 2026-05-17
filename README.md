@@ -145,6 +145,7 @@ Calculateurs présentés sous forme de tableau :
 - Pente de montée / descente (TOC / TOD)
 - Consommation carburant
 - Temps de vol
+- Conversions
 - *(extensible)*
 
 ---

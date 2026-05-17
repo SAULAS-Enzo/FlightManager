@@ -5,6 +5,7 @@
     <title>Flight Manager</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/positionnement.css">
+    <link rel="stylesheet" href="../css/nav.css">
     </head>
     <body>
         <header>
@@ -30,13 +31,34 @@
             </nav>
 
             <main>
-                <p>Main content</p>
+                <div id="bloc-nav">
+                    <h2>Table de navigation</h2>
+                    <div style="overflow-x:auto">
+                        <table id="table-nav">
+                            <thead>
+                                <tr>
+                                    <th>Point report</th>
+                                    <th>Altitude (ft)</th>
+                                    <th>VI (kts)</th>
+                                    <th>VS (kts)</th>
+                                    <th>Azimut (°)</th>
+                                    <th>Distance (NM)</th>
+                                    <th>Temps (min)</th>
+                                    <th>Temps cumulé (min)</th>
+                                    <th>Dist. cumulée (NM)</th>
+                                    <th>Observations</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-nav"></tbody>
+                        </table>
+                    </div>
+                    <button type="button" id="btnAjouterPoint">+ Ajouter un point</button>
+                </div>
             </main>
-
-            <aside>
-                <p>Sidebar</p>
-            </aside>
         </div>
-        
+        <script src="../js/utils.js"></script>
+        <script src="../js/ivao.js"></script>
+        <script src="../js/nav.js"></script>
     </body>
 </html>
