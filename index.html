@@ -30,112 +30,116 @@
             </nav>
 
             <main>
-                <div>
-                    <p>7- Indicatif d'appel</p>
-                    <input type="text" id="indicatif-appel" placeholder="F-BNXS">
+                <div class="formulaire">
+                    <div>
+                        <p>7- Indicatif d'appel</p>
+                        <input type="text" id="indicatif-appel" placeholder="F-BNXS">
+                    </div>
+                    <div>
+                        <p>8- Régime de vol</p>
+                        <select name="regime-vol" id="regime-vol">
+                            <option value="vfr">V - VFR</option>
+                            <option value="ifr">I - IFR</option>
+                            <option value="ifr/vfr">Y - IFR puis VFR</option>
+                            <option value="vfr/ifr">Z - VFR puis IFR</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Type de vol</p>
+                        <select name="type-vol" id="type-vol">
+                            <option value="g">G- Aviation générale</option>
+                            <option value="s">S- Transport commercial</option>
+                            <option value="n">N- Transport non commercial</option>
+                            <option value="m">M- Militaire</option>
+                            <option value="x">X- Autre</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>9- Nombre</p>
+                        <select name="nombre" id="nombre">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Type d'appareil</p>
+                        <select name="type-appareil" id="type-appareil">
+                            <option value="dr401">Robin DR 401</option>
+                            <option value="c172">Cessna 172</option>
+                            <option value="de58">Beechcraft Baron 58</option>
+                            <option value="c90b">King Air C90B</option>
+                            <option value="ec135">EC135</option>
+                            <option value="q400">Dasj 8 Q400</option>
+                            <option value="B738">Boeing 737-800</option>
+                            <option value="B747">Boeing 747</option>
+                            <option value="rafale">Rafale C</option>
+                            <option value="alphajet">Alphajet</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Turbulence</p>
+                        <input type="text" id="turbulence" readonly>
+                    </div>
+                    <div>
+                        <p>10- Equipement</p>
+                        <input type="text" id="equipement" readonly>
+                    </div>
+                    <div>
+                        <p>Transpondeur</p>
+                        <input type="text" id="transpondeur" readonly>
+                    </div>
+                    <div>
+                        <p>13- Aérodrome de départ</p>
+                        <input type="text" id="aerodrome-depart" placeholder="LFRS">
+                    </div>
+                    <div>
+                        <p>Heure de départ</p>
+                        <input type="time" id="heure-depart">
+                    </div>
+                    <div>
+                        <p>15- Vitesse de croisière</p>
+                        <input type="number" id="vitesse-croisiere">
+                    </div>
+                    <div>
+                        <p>Niveau de croisière</p>
+                        <input type="number" id="niveau-croisiere">
+                    </div>
+                    <div>
+                        <p>Route</p>
+                        <textarea id="route" cols="130" rows="4" placeholder="ex: LFPG DCT MOKDI..." readonly></textarea>
+                    </div>
+                    <div>
+                        <p>16- Aérodrome de destination</p>
+                        <input type="text" id="aerodrome-destination" placeholder="LFBD">
+                    </div>
+                    <div>
+                        <p>Total EET</p>
+                        <input type="number" id="total-eet" readonly>
+                    </div>
+                    <div>
+                        <p>Aérodrome de déroutement</p>
+                        <input type="text" id="aerodrome-deroutement" placeholder="LFBZ">
+                    </div>
+                    <div>
+                        <p>19- Endurance</p>
+                        <input type="number" id="endurance" readonly>
+                    </div>
+                    <div>
+                        <p>Personne à bord</p>
+                        <input type="number" id="personne-bord">
+                    </div>
                 </div>
-                <div>
-                    <p>8- Régime de vol</p>
-                    <select name="regime-vol" id="regime-vol">
-                        <option value="vfr">V - VFR</option>
-                        <option value="ifr">I - IFR</option>
-                        <option value="ifr/vfr">Y - IFR puis VFR</option>
-                        <option value="vfr/ifr">Z - VFR puis IFR</option>
-                    </select>
+                <div class="boutons">
+                    <button type="button" id="btnEnvoyer">Enregistrer</button>
+                    <button type="button" id="btnExporter">Exporter</button>
                 </div>
-                <div>
-                    <p>Type de vol</p>
-                    <select name="type-vol" id="type-vol">
-                        <option value="g">G- Aviation générale</option>
-                        <option value="s">S- Transport commercial</option>
-                        <option value="n">N- Transport non commercial</option>
-                        <option value="m">M- Militaire</option>
-                        <option value="x">X- Autre</option>
-                    </select>
-                </div>
-                <div>
-                    <p>9- Nombre</p>
-                    <select name="nombre" id="nombre">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                </div>
-                <div>
-                    <p>Type d'appareil</p>
-                    <select name="type-appareil" id="type-appareil">
-                        <option value="dr401">Robin DR 401</option>
-                        <option value="c172">Cessna 172</option>
-                        <option value="de58">Beechcraft Baron 58</option>
-                        <option value="c90b">King Air C90B</option>
-                        <option value="ec135">EC135</option>
-                        <option value="q400">Dasj 8 Q400</option>
-                        <option value="B738">Boeing 737-800</option>
-                        <option value="B747">Boeing 747</option>
-                        <option value="rafale">Rafale C</option>
-                        <option value="alphajet">Alphajet</option>
-                    </select>
-                </div>
-                <div>
-                    <p>Turbulence</p>
-                    <input type="text" id="turbulence" readonly>
-                </div>
-                <div>
-                    <p>10- Equipement</p>
-                    <input type="text" id="equipement" readonly>
-                </div>
-                <div>
-                    <p>Transpondeur</p>
-                    <input type="text" id="transpondeur" readonly>
-                </div>
-                <div>
-                    <p>13- Aérodrome de départ</p>
-                    <input type="text" id="aerodrome-depart" placeholder="LFRS">
-                </div>
-                <div>
-                    <p>Heure de départ</p>
-                    <input type="time" id="heure-depart">
-                </div>
-                <div>
-                    <p>15- Vitesse de croisière</p>
-                    <input type="number" id="vitesse-croisiere">
-                </div>
-                <div>
-                    <p>Niveau de croisière</p>
-                    <input type="number" id="niveau-croisiere">
-                </div>
-                <div>
-                    <p>Route</p>
-                    <textarea id="route" rows="4" placeholder="ex: LFPG DCT MOKDI..."></textarea>
-                </div>
-                <div>
-                    <p>16- Aérodrome de destination</p>
-                    <input type="text" id="aerodrome-destination" placeholder="LFBD">
-                </div>
-                <div>
-                    <p>Total EET</p>
-                    <input type="number" id="total-eet">
-                </div>
-                <div>
-                    <p>Aérodrome de déroutement</p>
-                    <input type="text" id="aerodrome-deroutement" placeholder="LFBZ">
-                </div>
-                <div>
-                    <p>19- Endurance</p>
-                    <input type="number" id="endurance">
-                </div>
-                <div>
-                    <p>Personne à bord</p>
-                    <input type="number" id="personne-bord">
-                </div>
-                <button type="button" id="btnEnvoyer">Enregistrer</button>
-                <button type="button" id="btnExporter">Exporter</button>
             </main>
 
             <aside>

@@ -24,6 +24,10 @@ header h2 {
     padding-top: 2%;
 }
 
+main{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 aside>h2 {
   text-align: center;
 }
@@ -64,6 +68,7 @@ button[type="button"] {
   border: none;
   border-radius: 10px;
   padding: 10px 24px;
+  margin-left: 20%;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
@@ -74,5 +79,13 @@ button[type="button"] {
 button[type="button"]:hover {
   background-color: #1c1c26;
   color: #f0ede6;
+}
+
+textarea[readonly],
+input[readonly] {
+  background-color: rgb(184, 184, 184);
+  border: 1px solid rgba(240, 237, 230);
+  color: rgba(240, 237, 230, 0.4);
+  cursor: not-allowed;
 }
 

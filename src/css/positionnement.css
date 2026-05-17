@@ -71,6 +71,26 @@ nav ul {
         flex-shrink: 0;
     }
 
+.formulaire{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formulaire>div {
+    flex-grow: 0;
+    flex-basis: auto;
+    margin: 1% 4% 1% 4% ;
+}
+
+.boutons{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3%;
+}
+
 
 
 
