@@ -33,7 +33,7 @@
                 <div class="formulaire">
                     <div>
                         <p>7- Indicatif d'appel</p>
-                        <input type="text" id="indicatif-appel" placeholder="F-BNXS">
+                        <input type="text" id="indicatif-appel" placeholder="FBNXS">
                     </div>
                     <div>
                         <p>8- Régime de vol</p>
@@ -100,16 +100,16 @@
                         <input type="text" id="aerodrome-depart" placeholder="LFRS">
                     </div>
                     <div>
-                        <p>Heure de départ</p>
+                        <p>Heure de départ (locale)</p>
                         <input type="time" id="heure-depart">
                     </div>
                     <div>
                         <p>15- Vitesse de croisière</p>
-                        <input type="number" id="vitesse-croisiere">
+                        <input type="number" id="vitesse-croisiere" readonly>
                     </div>
                     <div>
                         <p>Niveau de croisière</p>
-                        <input type="number" id="niveau-croisiere">
+                        <input type="number" id="niveau-croisiere" readonly>
                     </div>
                     <div>
                         <p>Route</p>
@@ -120,13 +120,14 @@
                         <input type="text" id="aerodrome-destination" placeholder="LFBD">
                     </div>
                     <div>
-                        <p>Total EET</p>
-                        <input type="number" id="total-eet" readonly>
-                    </div>
-                    <div>
                         <p>Aérodrome de déroutement</p>
                         <input type="text" id="aerodrome-deroutement" placeholder="LFBZ">
                     </div>
+                    <div>
+                        <p>Total EET</p>
+                        <input type="number" id="total-eet" readonly>
+                    </div>
+                    
                     <div>
                         <p>19- Endurance</p>
                         <input type="number" id="endurance" readonly>
@@ -137,11 +138,14 @@
                     </div>
                 </div>
                 <div class="boutons">
-                    <button type="button" id="btnEnvoyer">Enregistrer</button>
+                    <button type="button" id="btnEnregistrer">Enregistrer</button>
                     <button type="button" id="btnExporter">Exporter</button>
+                    <button type="button" id="btnReinitialiser">Réinitialiser</button>
+                    
                 </div>
+                <button type="button" id="btnParDefaut">Dev</button>
             </main>
-
+            
             <aside>
                 <h2>Liens utiles</h2>
                 <nav>
@@ -155,6 +159,8 @@
                 </nav>
             </aside>
         </div>
-        
+
+        <script src="src/js/utils.js"></script>
+        <script src="src/js/main.js"></script>
     </body>
 </html>

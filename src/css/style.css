@@ -85,7 +85,12 @@ textarea[readonly],
 input[readonly] {
   background-color: rgb(184, 184, 184);
   border: 1px solid rgba(240, 237, 230);
-  color: rgba(240, 237, 230, 0.4);
+  color: rgba(0, 0, 0);
   cursor: not-allowed;
 }
 
+.champ-erreur,
+input[type="number"].champ-erreur {
+  border: 2px solid red !important;
+  outline: none;
+}
